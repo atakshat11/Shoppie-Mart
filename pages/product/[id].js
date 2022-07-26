@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { Button, Container, Row} from "react-bootstrap";
 import DeleteModal from "../../components/DeleteModal.js";
-import baseUrl from "../../helpers/baseUrl.js";
 import { parseCookies } from "nookies";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,7 +23,7 @@ const Product = ({ product }) => {
 
   const AddToCart = async () => {
     // console.log(cookie.token,typeof(cookie.token))
-    const res = await fetch(`${baseUrl}/api/cart`, {
+    const res = await fetch(`http://localhost:3000/api/cart`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -127,14 +126,14 @@ const Product = ({ product }) => {
 };
 
 export async function getServerSideProps({ params: { id } }) {
-  const res = await fetch(`${baseUrl}/api/product/${id}`);
+  const res = await fetch(`http://localhost:3000/api/product/${id}`);
   const data = await res.json();
   return {
     props: { product: data },
   };
 }
 // export async function getStaticProps({params:{id}}) {
-//     const res = await fetch(`${baseUrl}/api/product/${id}`)
+//     const res = await fetch(`http://localhost:3000/api/product/${id}`)
 //     const data = await res.json()
 //     return {
 //       props: {product:data}

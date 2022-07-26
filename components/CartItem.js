@@ -1,7 +1,6 @@
 import React, {useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import baseUrl from "../helpers/baseUrl";
 import { parseCookies } from "nookies";
 import {faMultiply} from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +11,7 @@ const CartItem = ({ product }) => {
   const { token } = parseCookies();
   const handleRemove = async (pid) => {
     console.log("handle remove", pid);
-    const res = await fetch(`${baseUrl}/api/cart`, {
+    const res = await fetch(`http://localhost:3000/api/cart`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

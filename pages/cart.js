@@ -1,4 +1,4 @@
-import baseUrl from "../helpers/baseUrl";
+
 import { parseCookies } from "nookies";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -89,7 +89,7 @@ export async function getServerSideProps(ctx) {
       props: { products: [] },
     };
   }
-  const res = await fetch(`${baseUrl}/api/cart`, {
+  const res = await fetch(`http://localhost:3000/api/cart`, {
     headers: {
       Authorization: token,
     },

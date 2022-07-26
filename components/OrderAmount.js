@@ -24,7 +24,7 @@ await stripe.redirectToCheckout({ sessionId: id });
         // const {token}=parseCookies()
         // console.log('token in cart dta handle check',token);
         // console.log(paymentInfo)
-        // const res = await fetch(`${baseUrl}/api/payment`,{
+        // const res = await fetch(`http://localhost:3000/api/payment`,{
         //     method:"POST",
         //     headers:{
         //        "Content-Type":"application/json",

@@ -1,7 +1,6 @@
 import React from "react";
 import { Field, Form, Formik } from "formik";
 import cookie from "js-cookie";
-import baseUrl from "../helpers/baseUrl";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
@@ -21,7 +20,7 @@ const login = () => {
       },
       body: JSON.stringify(values),
     };
-    const res = await fetch(`${baseUrl}/api/login`, option);
+    const res = await fetch(`http://localhost:3000/api/login`, option);
     const loginData = await res.json();
     console.log("loginData", loginData);
 

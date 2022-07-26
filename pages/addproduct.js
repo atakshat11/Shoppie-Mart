@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import baseUrl from "../helpers/baseUrl";
 import {parseCookies} from "nookies";
 import { toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -32,7 +31,7 @@ const AddProduct = () => {
     e.preventDefault();
     try {
       const mediaUrl = await imageUpload();
-      const res = await fetch(`${baseUrl}/api/products`, {
+      const res = await fetch(`http://localhost:3000/api/products`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import baseUrl from "../helpers/baseUrl";
 import { useRouter } from "next/router";
 
 export default function DeleteModal({ product }) {
@@ -12,7 +11,7 @@ export default function DeleteModal({ product }) {
   const handleShow = () => setShow(true);
   console.log("ID FOR DELETE PRODUCT:", product._id);
   const deleteProduct = async () => {
-    const res = await fetch(`${baseUrl}/api/product/${product._id}`, {
+    const res = await fetch(`http://localhost:3000/api/product/${product._id}`, {
       method: "DELETE",
     });
     console.log(res);
