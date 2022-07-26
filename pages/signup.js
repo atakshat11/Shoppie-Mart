@@ -2,13 +2,12 @@ import React from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as yup from "yup";
 import baseUrl from "../helpers/baseUrl";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
-  const router = useRouter();
+ 
 
   //default Values
   const defaultValue = {

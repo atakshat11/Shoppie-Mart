@@ -6,7 +6,7 @@ import cookie from "js-cookie";
 import { useRouter } from "next/router";
 import CartItem from "../components/CartItem";
 import OrderAmount from "../components/OrderAmount";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 
 const Cart = ({ token, error, products }) => {
   const router = useRouter();

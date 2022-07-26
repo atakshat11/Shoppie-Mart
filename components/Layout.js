@@ -10,7 +10,7 @@ return(
         <link rel="stylesheet" href="/style.css"/> */}
         
      
-        //Add Bootstrap font-awesome links here
+        {/* //Add Bootstrap font-awesome links here */}
     </Head>
     <Navbar/>
     {children}

@@ -1,7 +1,6 @@
 //Component Name should be CamelCase--About,Home,Contact
 //Pages Name should be start with small letter--home,about,contact
-const cookie = nookies.get(context)
-  console.log('cookie data new',cookie)
+
 
     {/* <Row className="mt-3">
                 <Col md={8}>

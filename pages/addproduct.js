@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import baseUrl from "../helpers/baseUrl";
-import  nookies,{parseCookies} from "nookies";
+import {parseCookies} from "nookies";
 import { toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 

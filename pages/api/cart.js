@@ -1,4 +1,3 @@
-import jwt from "jsonwebtoken";
 import Cart from "../../models/Cart";
 import Authenticated from "../../helpers/Authenticated";
 import initDb from "../../helpers/initDB";

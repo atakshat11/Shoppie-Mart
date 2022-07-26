@@ -36,7 +36,7 @@ export default async (req, res) => {
       email,
       phoneNumber,
       password: hashedPassword,
-      confirmPassword: password,
+      confirmPassword: confirmPassword,
     }).save();
     console.log("Register User Data", newUser);
      await new Cart({user:newUser._id}).save()

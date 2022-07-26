@@ -1,6 +1,5 @@
 import React from "react";
 import { Field, Form, Formik } from "formik";
-import { useRouter } from "next/router";
 import cookie from "js-cookie";
 import baseUrl from "../helpers/baseUrl";
 import { toast } from "react-toastify";
@@ -8,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
 const login = () => {
-  const router = useRouter();
+
   const defaultValue = {
     email: "",
     password: "",

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, ListGroup, Row, Button } from "react-bootstrap";
 import StripeCheckout from "react-stripe-checkout";
-import baseUrl from "../helpers/baseUrl";
-import { parseCookies } from "nookies";
 import axios from  'axios'
 import getStripe from "../helpers/get-stripe";
 const OrderAmount = ({ products }) => {
@@ -13,7 +11,7 @@ const OrderAmount = ({ products }) => {
  const {
   data: { id },
 } = await axios.post('/api/checkout_sessions', {
-  items: Object.entries(paymentInfo).map(([_, { id, quantity }]) => ({
+  items: Object.entries(paymentInfo).map(([{ id, quantity }]) => ({
     price: id,
     quantity,
   })),

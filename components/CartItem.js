@@ -8,7 +8,7 @@ import {faMultiply} from "@fortawesome/free-solid-svg-icons";
 const CartItem = ({ product }) => {
 
   console.log('product crt item',product)
-  const [products, setCartProduct] = useState(product);
+  const [setCartProduct] = useState(product);
   const { token } = parseCookies();
   const handleRemove = async (pid) => {
     console.log("handle remove", pid);
@@ -28,7 +28,7 @@ const CartItem = ({ product }) => {
     console.log("updated card data", updatedCart);
   };
   // console.log("product1234", product);
-  const [quantity, setQuantity] = useState(product.quantity);
+  // const [quantity, setQuantity] = useState(product.quantity);
   const deliveryDate = new Date(
     Date.now() + 3600 * 1000 * 72
   ).toLocaleDateString("en-us", {
